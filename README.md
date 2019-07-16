@@ -15,3 +15,8 @@ In `configs` create a new config file. Copy the content of `ssd300_voc0712.yaml`
 python train_ssd.py --config-file configs/vgg_ssd300_voc0712.yaml
 ```
 Modify the config file path and name. Also there is some argument we can specify such as `--log_step`, `--save_step`and `--eval_step`. See `train_ssd.py` for more details.
+### Run demo
+```bash
+python demo.py --config-file configs/vgg_ssd300_voc0712.yaml --images_dir demo --ckpt https://github.com/lufficc/SSD/releases/download/1.2/vgg_ssd300_voc0712.pth
+```
+When running `demo.py`, remeber to check line37 to make sure your data format is `jpg` or `png`.
